@@ -1,2 +1,2 @@
 # IBM-AI-CODES
-Some of applications of AI with IBM
+With this repository you can understand intermediate and advanced AI.
