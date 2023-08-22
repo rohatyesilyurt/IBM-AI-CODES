@@ -54,12 +54,15 @@ test_x = np.asanyarray(test[['ENGINESIZE']])  # np.asanyarray, Python listelerin
 test_y = np.asanyarray(test[['CO2EMISSIONS']])
 y_prediction = regr.predict(test_x)
 
-print(f"Mean absolute error:{np.mean(np.absolute(y_prediction - test_y)):.2f}")
-print(f"Residual sum of squares (MSE): {np.mean((y_prediction - test_y) ** 2):.2f}")
-print(f"R2-score: {r2_score(test_y , y_prediction):.2f}")
+for i in range(5):
+    print(y_prediction[i], " ", test_y[i])
 
-# plt.scatter(train.ENGINESIZE, train.CO2EMISSIONS, color='blue')
-plt.scatter(test_x, test_y, color='red')
-plt.scatter(test_x, y_prediction, color='blue')
-plt.plot(test_x, y_prediction, color='blue')
-plt.show()
+# print(f"Mean absolute error:{np.mean(np.absolute(y_prediction - test_y)):.2f}")
+# print(f"Residual sum of squares (MSE): {np.mean((y_prediction - test_y) ** 2):.2f}")
+# print(f"R2-score: {r2_score(test_y , y_prediction):.2f}")
+
+# # plt.scatter(train.ENGINESIZE, train.CO2EMISSIONS, color='blue')
+# plt.scatter(test_x, test_y, color='red')
+# plt.scatter(test_x, y_prediction, color='blue')
+# plt.plot(test_x, y_prediction, color='blue')
+# plt.show()
